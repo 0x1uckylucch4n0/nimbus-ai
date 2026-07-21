@@ -1,0 +1,13 @@
+name: deploy-production
+on:
+  push:
+    branches: [main]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: echo "build"
+      - name: Deploy to ECS (production)
+        run: echo "deploy"
